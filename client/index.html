@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Socket.io</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: "Montserrat", sans-serif;
+      }
+      #message-container {
+        width: 50vw;
+        height: 50%;
+        border: 2px solid black;
+        margin: 1%;
+        padding: 0.5%;
+        font-weight: 700;
+        overflow: scroll;
+      }
+      .input-flex {
+        width: 50vw;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: space-between;
+      }
+      #message-input,
+      #room-input {
+        margin: 10px;
+        padding: 10px;
+        width: 80%;
+      }
+      #send-button,
+      #room-button {
+        width: 60px;
+        margin: 1px;
+        padding: 10px;
+      }
+      #form {
+        padding: 0;
+      }
+    </style>
+    <script type="module" src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>Chat App</h1>
+    <div id="message-container"></div>
+    <form id="form">
+      <div class="input-flex">
+        <label for="message-input">Message</label>
+        <input type="text" id="message-input" />
+        <button type="submit" id="send-button">Send</button>
+      </div>
+      <br />
+      <div class="input-flex">
+        <label for="room-input">Room&nbsp&nbsp&nbsp&nbsp</label>
+        <input type="text" id="room-input" />
+        <button type="submit" id="room-button">Join</button>
+      </div>
+    </form>
+  </body>
+</html>
